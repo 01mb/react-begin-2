@@ -1,0 +1,63 @@
+connect local files to github
+
+git init
+git add .
+git remote add origin "link" {git remote add origin https://github.com/01mb/git-new-repo-test.git}
+git commit -m "first commit"
+git push -u origin master
+
+--------------------------------------------------------------------------
+package.json = configuration of NPM.
+package-lock.json = keeps version track/record of packages/dependencies.
+node modules = Database of packages/dependencies.
+
+To install npm in our project
+
+npm init
+npm install -D parcel 
+
+.gitignore > /node_modules , /dist , .parel-cache = to skip upload node modules on to git.
+with the help of package-lock.json, we can regenerate node modules, no need to upload node modules onto github.
+
+npm install = To install node modules again..
+
+npx parcel index.html = executing parcel to index.html
+--------------------------------------------------------------------------
+
+npm install react = to install react in project..
+npm install react-dom 
+
+App.js > import React from "react";
+         import ReactDom from "react-dom/client"; = to import react library in our project
+
+<script type="module"></script> = to understand the browsers.
+
+add this in package.json
+"start": "parcel index.html",
+"build": "parcel build index.html",
+
+now type = npm run start/npm start
+npm build
+npm run start = npx parcel index.html 
+
+--------------------------------------------------------------------------
+Js syntax
+import React from "react";
+import ReactDom from "react-dom/client";
+
+const Heading = () => {
+    return<h1>hello</h1>
+}
+
+const root = ReactDom.createRoot(document.getElementById('root'));
+root.render(<Heading/>);
+--------------------------------------------------------------------------
+
+project structure
+
+root > src folder > App.js
+root > componenet folder > Heading.js, Mainbody.js, Restaurantcards.js
+root > utils > Data.js
+
+export default Heading; > Heading.js
+import Heading from "../componenet/Heading"; > App.js;
