@@ -1,8 +1,8 @@
 import restData from "../utils/Data";
 
 const Restaurantcards = (props) => { 
-    const { restData } = props;
-    const {name, dish, rating, time, img} = restData;
+    const { listRestData } = props;
+    const {name, dish, rating, time, img} = listRestData;
     return(
         <div className="rest-cards">
             <img className="rest-img" src={img}/>
